@@ -296,3 +296,7 @@ input[type=text]:focus {
 #post-title{
   width: 300px;
 }
+
+#login-error,#search-Error,#signup-error {
+  visibility: hidden;
+}

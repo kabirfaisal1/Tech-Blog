@@ -70,7 +70,10 @@ router.post('/', (req, res) => {
     
         res.json(dbUserData);
       });
-    });
+    }).  catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+  });
   });
 
   // LOGIN
@@ -84,6 +87,7 @@ router.post('/', (req, res) => {
         res.status(400).json({ message: 'No user with that email address!' });
         return;
       }
+
   
       const validPassword = dbUserData.checkPassword(req.body.password);
   
@@ -102,7 +106,10 @@ router.post('/', (req, res) => {
   
         res.json({ user: dbUserData, message: 'You are now logged in!' });
       });
-    });
+    })   .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+  });
   });
 
 
@@ -157,5 +164,6 @@ router.delete('/:id', withAuth, (req, res) => {
         res.status(500).json(err);
       });
   });
+  //EXPORT ROUTER ----------------
 
 module.exports = router;
