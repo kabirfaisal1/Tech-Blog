@@ -1,4 +1,4 @@
-<div class="column">
+{{!-- <div class="column">
 <h2 class="title pb-4">login:</h2><hr>
 <form class="login-form">
   <div>
@@ -11,10 +11,43 @@
   </div>
   <div>
     <button type="submit" class="button is-primary">login</button>
-    <a href="/signup"><button type="button" class="button is-danger">signup</button></a>
+    
   </div>
 </form>
-</div>
+</div> --}}
+
+
+ 
+    <div class="wrapper fadeInDown">
+      <div id="formContent">
+        <!-- Tabs Titles -->
+        <!-- Icon -->
+        <div class="fadeIn first">
+          <img class="rounded mx-auto d-block" style="width:200px;height:200px;" src="https://cdn-icons-png.flaticon.com/512/149/149071.png"
+            id="icon" alt="User Icon" />
+        </div>
+
+        <!-- Login Form -->
+        <form class="login-form" >
+
+          <input type="text" id="email-login" class="fadeIn
+            second" name="login" placeholder="email">
+          <input type="text" id="password-login" class="fadeIn
+            third" name="login" placeholder="password">
+
+
+
+    </form>
+        <!-- Remind Password -->
+        <div id="formFooter">
+        
+    <button type="submit" class="button is-primary">Log In</button>
+    <a href="/signup"><button type="button" class="button is-danger">Sing Up</button></a>
+
+          
+      </div>
+    </div>
+
 
 <!-- javascript file-->
-<script src="/public/js/login.js"></script>
+<script src="/js/login.js"></script>
