@@ -15,9 +15,13 @@ Writing about tech can be just as important as making it. Developers spend plent
  
 ## [Deployed URL](#table-of-contents)
 ```
- https://morning-bastion-19313.herokuapp.com/
+https://fktech-blog-14.herokuapp.com
 ```
 
+## [Git Repo](#table-of-contents)
+```
+https://github.com/kabirfaisal1/Tech-Blog.git
+```
 ## [User Story](#table-of-contents)
 ```
 AS A developer who writes about tech
@@ -25,10 +29,6 @@ I WANT a CMS-style blog site
 SO THAT I can publish articles, blog posts, and my thoughts and opinions
 ```
 
-## [Git Repo](#table-of-contents)
-```
-https://github.com/kabirfaisal1/Tech-Blog.git
-```
 
 ## [Dependency](#table-of-contents)
 ```
