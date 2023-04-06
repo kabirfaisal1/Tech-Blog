@@ -1,83 +1,61 @@
-<div class="container mt-4 ">
+<br>
+<br>
+<br>
+<section class="vh-100">
+  <div class="container-fluid h-custom">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-md-9 col-lg-6 col-xl-5">
+        <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp" class="img-fluid"
+          alt="Sample image">
+      </div>
+      <div id="login-form" class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+        <form>
 
-  <div class="mb-4 mb-lg-0">
-    <div class="wrapper fadeInDown">
-      <div id="formContent">
-        <!-- Tabs Titles -->
-        <!-- Icon -->
-        <div class="fadeIn first">
-          <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" id="icon" alt="User Icon" />
-        </div>
+          <!-- Email input -->
+          <div class="form-outline  mb-4">
+            <input type="email" id="email-login" class="form-control form-control-lg"
+              placeholder="Enter a valid email address" />
+            <label class="form-label" for="email-login">Email address</label>
+          </div>
 
-        <!-- Login Form -->
-        <form class="login-form">
-            <div>
-    <label for="email-login">email:</label>
-          <input type="text" id="email-login" class="fadeIn
-            second" name="login" placeholder="email">
+          <!-- Password input -->
+
+
+          <div class="form-outline mb-3">
+            <input type="password" id="form3Example4" class="form-control form-control-lg"
+              placeholder="Enter password" />
+            <label class="form-label" for="form3Example4">Password</label>
+          </div>
+
+          {{!-- <div class="d-flex justify-content-between align-items-center">
+            <!-- Checkbox -->
+            <div class="form-check mb-0">
+              <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3" />
+              <label class="form-check-label" for="form2Example3">
+                Remember me
+              </label>
             </div>
-              <div>
-    <label for="password-login">password:</label>
-          <input type="password" id="password-login" class="fadeIn
-            third" name="login" placeholder="password">
-</div>
-          <div>
-            <button id="submit" type="submit">login</button>
+            <a href="#!" class="text-body">Forgot password?</a>
+          </div> --}}
+
+          <div class="text-center text-lg-start mt-4 pt-2">
+            <button type="button" class="btn btn-primary btn-lg"
+              style="padding-left: 2.5rem; padding-right: 2.5rem;">Login</button>
+            <div id="login-error" class="alert alert-danger" role="alert">
+
+              <p> We're sorry, there is an error with your email and/or password.
+              </p>
+            </div>
+            <p class="small fw-bold mt-2 pt-1 mb-0">Don't have an account? <a href="/signup"
+                class="link-danger">Register</a></p>
           </div>
-
-          <div id="login-error" class="alert alert-danger" role="alert">
-
-            <p> We're sorry, there is an error with your email and/or password.
-            </p>
-          </div>
-
-
 
         </form>
-        <!-- Remind Password -->
-        <div id="formFooter">
-          <a class="underlineHover" href="/signup">Sing Up</a>
-        </div>
-
       </div>
     </div>
   </div>
 
-</div>
+</section>
 
-
-
-{{!--
-<div class="wrapper fadeInDown">
-  <div id="formContent">
-    <!-- Tabs Titles -->
-    <!-- Icon -->
-    <div class="fadeIn first">
-      <img class="rounded mx-auto d-block" style="width:200px;height:200px;"
-        src="https://cdn-icons-png.flaticon.com/512/149/149071.png" id="icon" alt="User Icon" />
-    </div>
-
-    <!-- Login Form -->
-    <form class="login-form">
-
-      <input type="text" id="email-login" class="fadeIn
-            second" name="login" placeholder="email">
-      <input type="text" id="password-login" class="fadeIn
-            third" name="login" placeholder="password">
-
-
-
-    </form>
-    <!-- Remind Password -->
-    <div id="formFooter">
-
-      <button type="submit" class="button is-primary">Log In</button>
-      <a href="/signup"><button type="button" class="button is-danger">Sing Up</button></a>
-
-
-    </div>
-  </div> --}}
-
-
-  <!-- javascript file-->
-  <script src="/js/login.js"></script>
+<!-- javascript file-->
+<script src="/js/login.js"></script>
