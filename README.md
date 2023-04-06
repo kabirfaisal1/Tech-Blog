@@ -15,7 +15,7 @@ Writing about tech can be just as important as making it. Developers spend plent
  
 ## [Deployed URL](#table-of-contents)
 ```
-https://fktech-blog-14.herokuapp.com
+https://fk-tech-blog.herokuapp.com
 ```
 
 ## [Git Repo](#table-of-contents)
