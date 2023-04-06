@@ -30,9 +30,9 @@ router.get('/', withAuth, (req, res) => {
         }
       ]
     })
-      .then(dbData => {
+      .then(dbPostData => {
         // serialize data before passing to template
-        const posts = dbData.map(post => post.get({ plain: true }));
+        const posts = dbPostData.map(post => post.get({ plain: true }));
         res.render('dashboard', { posts, loggedIn: true });
       })
       .catch(err => {
@@ -67,14 +67,14 @@ router.get('/', withAuth, (req, res) => {
         }
       ]
     })
-      .then(dbData => {
-        if (!dbData) {
+      .then(dbPostData => {
+        if (!dbPostData) {
           res.status(404).json({ message: 'No post found with this id' });
           return;
         }
   
         // serialize the data
-        const post = dbData.get({ plain: true });
+        const post = dbPostData.get({ plain: true });
 
         res.render('edit-post', {
             post,
@@ -114,9 +114,9 @@ router.get('/create/', withAuth, (req, res) => {
         }
       ]
     })
-      .then(dbData => {
+      .then(dbPostData => {
         // serialize data before passing to template
-        const posts = dbData.map(post => post.get({ plain: true }));
+        const posts = dbPostData.map(post => post.get({ plain: true }));
         res.render('create-post', { posts, loggedIn: true });
       })
       .catch(err => {

@@ -27,8 +27,8 @@ router.get('/', (req, res) => {
         }
       ]
     })
-      .then(dbData => {
-        const posts = dbData.map(post => post.get({ plain: true }));
+      .then(dbPostData => {
+        const posts = dbPostData.map(post => post.get({ plain: true }));
         res.render('homepage', {
             posts,
             loggedIn: req.session.loggedIn
@@ -84,14 +84,14 @@ router.get('/login', (req, res) => {
         }
       ]
     })
-      .then(dbData => {
-        if (!dbData) {
+      .then(dbPostData => {
+        if (!dbPostData) {
           res.status(404).json({ message: 'No post found with this id' });
           return;
         }
   
         // serialize the data
-        const post = dbData.get({ plain: true });
+        const post = dbPostData.get({ plain: true });
   
         // pass data to template
         res.render('single-post', {

@@ -4,7 +4,7 @@ const withAuth = require('../../utils/auth');
 
 router.get('/', (req, res) => {
     Comment.findAll({})
-      .then(dbData => res.json(dbData))
+      .then(dbCommentData => res.json(dbCommentData))
       .catch(err => {
         console.log(err);
         res.status(500).json(err);
@@ -20,7 +20,7 @@ router.post('/', withAuth, (req, res) => {
       // use the id from the session
       user_id: req.session.user_id,
     })
-      .then(dbData => res.json(dbData))
+      .then(dbCommentData => res.json(dbCommentData))
       .catch(err => {
         console.log(err);
         res.status(400).json(err);
@@ -34,19 +34,17 @@ router.delete('/:id', withAuth, (req, res) => {
           id: req.params.id
         }
       })
-        .then(dbData => {
-          if (!dbData) {
+        .then(dbCommentData => {
+          if (!dbCommentData) {
             res.status(404).json({ message: 'No comment found with this id' });
             return;
           }
-          res.json(dbData);
+          res.json(dbCommentData);
         })
         .catch(err => {
           console.log(err);
           res.status(500).json(err);
         });
 });
-
-
 
 module.exports = router;
