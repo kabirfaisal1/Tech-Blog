@@ -17,6 +17,7 @@ async function signupFormHandler(event) {
   // If user's email and password matches the email and password in our system, then
   // respond with a fetch request of current users in system to ensure that email & username are unique
   if (signupUsernameEl && signupEmailEl && signupPasswordEl) {
+    console.log(signupUsernameEl,signupEmailEl ,signupPasswordEl)
     const response = await fetch("/api/users", {
       method: "post",
       // turns username, email, and password into a JSON string
@@ -41,5 +42,5 @@ async function signupFormHandler(event) {
 }
 
 document
-  .querySelector(".signup-form")
+  .querySelector("#signup-form")
   .addEventListener("submit", signupFormHandler);

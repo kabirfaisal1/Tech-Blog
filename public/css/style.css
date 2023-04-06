@@ -22,3 +22,6 @@ main{
 #footer{
  background-color: beige;
 }
+#logout, #login{
+  color:#0dcaf0;
+}
