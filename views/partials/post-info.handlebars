@@ -1,28 +1,28 @@
-<div class=class="card mb-6">
-    <header class="card-header card-header-title has-background-grey-lighter">
 
-        <div class="column">
-            <p class=" has-text-primary-light"></p>
-            <a href="/post/{{id}}" class="has-text-black is-capitalized is-pulled-left">{{title}} </a></p>
+    <div class="card mb-3">
+        <header class="card-header card-header-title has-background-grey-lighter">
+
+            <div class="column">
+                <h5><a href="/post/{{id}}" class="has-text-black is-capitalized is-pulled-left">{{title}} </a></h5>
+            </div>
+
+            <div class="column">
+                <span class=""> </span>
+            </div>
+
+        </header>
+
+        <div id="cardBody" class="card-body">
+            <div class="content has-text-justified">
+                {{post_content}}
+            </div>
+            <div class="is-pulled-right">
+                <b>{{user.username}}</b> |
+                <a href="https://twitter.com/{{user.twitter}}">twitter | <i class="fab fa-twitter"></i></a>
+                <a href="https://github.com/{{user.github}}">github<i class="fab fa-github"></i></a>
+                | {{format_date created_at}} | <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment"
+                    comments.length}}</a>
+            </div>
+
         </div>
 
-        <div class="column">
-            <span class=""> </span>
-        </div>
-
-    </header>
-
-    <div class="card-body">
-        <div class="content has-text-justified">
-            {{post_content}}
-        </div>
-        <div class="is-pulled-right">
-            <b>{{user.username}}</b> |
-            <a href="https://twitter.com/{{user.twitter}}"><i class="fab fa-twitter"></i></a>
-            <a href="https://github.com/{{user.github}}"><i class="fab fa-github"></i></a>
-            | {{format_date created_at}} | <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment"
-                comments.length}}</a>
-        </div>
-
-    </div>
-</div>

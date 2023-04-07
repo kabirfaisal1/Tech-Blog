@@ -1,19 +1,38 @@
-    <div class="mb-5 pt-3">
-        <a href="/dashboard/create/"><button id="create-post" class="button is-primary is-pulled-right">create post</button></a>
-        
-        <h2 class="title pb-4">dashboard: your posts</h2><hr>
-{{#if posts.length}}
+<section id="section" class="vh-100">
+    <div id="pageHeader" class="page-header">
+        <h1>
+            Dashboard: your posts
+            {{!-- <small>Subtext for header</small> --}}
+        </h1>
+    </div>
+    <div class="container">
+        <div class="row">
+            {{!-- <div class="col-sm">
+                One of three columns
+            </div> --}}
+            {{#if posts.length}}
+            <div class="col-sm">
+
+                {{#each posts as |post|}}
+                {{> post-info post}}
+                <div class="card-footer text-muted">
+                    <a class="btn btn-info" href="/dashboard/edit/{{post.id}}"> edit post</a>
+                </div>
+
+            </div>
+            {{/each}}
+
+            {{else}}
+            <div id="pageHeader" class="page-header">
+                <h1>
+                    You do not currently have any posts
+                    {{!-- <small>Subtext for header</small> --}}
+                </h1>
+            </div>
+        </div>
+
+        {{/if}}
+
     </div>
 
-    {{#each posts as |post|}}
-        {{> post-info post}}
-        
-            <a href="/dashboard/edit/{{post.id}}"><button class="button mb-5 ml-5 is-warning">edit post</button></a>
-        </div>
-    {{/each}}
-
-{{else}}
-<h6 class="pb-4 has-text-centered is-italic">you do not currently have any posts</h6>
-
-{{/if}}
-
+</section>

@@ -2,6 +2,7 @@
 html, body {
   min-height: 100%;
   scroll-behavior: smooth;
+  background-color: #ABC4AA;
 }
 * { 
   margin: 0;
@@ -20,8 +21,19 @@ main{
 
 }
 #footer{
+  margin-top: 5px auto;
+  padding:  5px auto;
+
  background-color: beige;
 }
 #logout, #login{
   color:#0dcaf0;
+}
+#pageHeader{
+  text-align: center;
+}
+#section{
+  margin-top: 10px ;
+  padding:  10px ;
+  margin-bottom: 10px ;
 }
